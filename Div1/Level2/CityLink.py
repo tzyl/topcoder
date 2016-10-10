@@ -14,9 +14,10 @@ class CityLink(object):
                     distances[i][j] = (dx + 1) / 2
                 else:
                     distances[i][j] = max(dx, dy)
-        for i in xrange(n):
-            for j in xrange(n):
-                for k in xrange(n):
+        # Floyd-Warshall algorithm.
+        for k in xrange(n):
+            for i in xrange(n):
+                for j in xrange(n):
                     distances[i][j] = min(distances[i][j], max(distances[i][k], distances[k][j]))
         return max(distances[i][j] for i in xrange(n) for j in xrange(n))
 
