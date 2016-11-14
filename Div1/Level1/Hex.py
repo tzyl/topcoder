@@ -40,10 +40,6 @@ class Hex(object):
         board[row_idx] = board[row_idx][:1 + 2*d] + m + board[row_idx][1 + 2*d + 1:]
 
 
-# print "_"
-# print "/\\_"
-# print "\\_/\\_"
-# print "\n".join([" _", "/h\\_", "\\_/ \\_", "/v\\_/ \\_", "\\_/ \\_/ \\", "/v\\_/h\\_/", "\\_/ \\_/ \\", "/v\\_/ \\_/", "\\_/ \\_/ \\", "  \\_/ \\_/", "    \\_/ \\", "      \\_/"])
-
-# hex_game = Hex()
-# print "\n".join(hex_game.picture(3, ["00v", "01v", "02v", "11h", "21h"]))
+if __name__ == '__main__':
+    hex_game = Hex()
+    print "\n".join(hex_game.picture(3, ["00v", "01v", "02v", "11h", "21h"]))
